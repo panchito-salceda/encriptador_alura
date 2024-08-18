@@ -1,0 +1,34 @@
+:root{
+    --fondo-header:#e2e2e2;
+    --fondo-principal:#e3e3f5;
+    --fondo-footer:#d9d9ff;
+}
+*{
+    font-family: 'Segoe UI';
+    margin:0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    background:var(--fondo-header);
+    height: 15%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+main{
+    width:100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    background: var(--fondo-principal);
+}
+footer{
+    width:100%;
+    background-color: var(--fondo-footer);
+    height: 15%;
+}

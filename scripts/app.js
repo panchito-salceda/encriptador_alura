@@ -14,10 +14,14 @@ function reverseString(mensaje){
 }
 
 function validacionMensaje(mensaje){
-if (mensaje == ""){
-    showText.textContent = "Por favor, ingresa una palabra"
+    if (mensaje == ""){
+        showText.textContent = "Por favor, ingresa una palabra"
+    }
 }
-}
+
+inputText.addEventListener('click', ()=>{
+    getElementById('btn-encript').style.display = 'block'
+})
 
 botonTransfer.addEventListener('click', () => {
         
@@ -35,6 +39,7 @@ botonTransfer.addEventListener('click', () => {
         mensajeInversa = reverseString(mensajeCifrado)
         showText.textContent = mensajeInversa
         inputText.value = '';
+        document.getElementById('btn-desencript').style.display = 'block'
     }
 )
 

@@ -13,8 +13,17 @@ function reverseString(mensaje){
     return mensaje.split("").reverse().join("");
 }
 
+function validacionMensaje(mensaje){
+if (mensaje == ""){
+    showText.textContent = "Por favor, ingresa una palabra"
+}
+}
+
 botonTransfer.addEventListener('click', () => {
-        let text = inputText.value;
+        
+    let textn = inputText.value;
+    validacionMensaje(textn)
+    let text = textn.replaceAll(" ", "*")
         let mensajeCifrado = '';
 
         for (let i = 0; i< text.length; i++) {
@@ -42,7 +51,9 @@ botonBack.addEventListener('click', ()=> {
             
         }
     }
+    mensajeDescifrado = mensajeDescifrado.replaceAll('*',' ')
     rescuedText.textContent = mensajeDescifrado;
+    
     mensajeInversa = ''
 });
 

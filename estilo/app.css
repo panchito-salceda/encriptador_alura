@@ -20,9 +20,10 @@ body{
 header{
     width: 100%;
     background:var(--fondo-header);
-    height: 100px;
+    height: 80px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     z-index: 3;
+    padding:20px;
 }
 main{
     width:100%;
@@ -71,7 +72,10 @@ main{
     border-radius: 5px;
     margin-bottom: 5px;
 }
-
+p{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 #btn-desencript{
     display: none;
 }
@@ -97,6 +101,15 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+.footer-desc{
+    margin-top:10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.footer-desc p{
+    font-family: 'segoe UI';
+    font-weight: 600;
 }
 @media (width < 1000px){
     main{

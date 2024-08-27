@@ -3,6 +3,8 @@ const inputText = document.getElementById('inputText')
 const botonTransfer = document.getElementById('btn-encript')
 const showText = document.getElementById('mensaje-encriptado')
 const botonBack = document.getElementById('btn-desencript')
+const rescuedText = document.getElementById('mensaje-restaurado')
+
 function generateNumber(){
     return Math.floor(Math.random() * 10);
 }
@@ -29,6 +31,18 @@ botonTransfer.addEventListener('click', () => {
 
 botonBack.addEventListener('click', ()=> {
     let text2 = reverseString(mensajeInversa)
-    alert(text2)
+    let mensajeDescifrado = '';
+
+    for (let j = 0; j< text2.length; j++){
+        //mensajeDescifrado += text2[j];
+        if(isNaN(text2[j])){
+            
+            mensajeDescifrado += text2[j];
+        }else{
+            
+        }
+    }
+    rescuedText.textContent = mensajeDescifrado;
+    mensajeInversa = ''
 });
 
